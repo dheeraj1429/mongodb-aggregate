@@ -1,0 +1,285 @@
+[
+   {
+      "_id": {
+         "$oid": "634692d0f1c0365465be32df"
+      },
+      "name": "Apple iPhone 14 128GB Starlight",
+      "price": 1000,
+      "discription": "15.40 cm (6.1-inch) Super Retina XDR display\r\nAdvanced camera system for better photos in any light\r\nCinematic mode now in 4K Dolby Vision up to 30 fps\r\nAction mode for smooth, steady, handheld videos\r\nVital safety technology — Crash Detection calls for help when you can’t",
+      "stockStatus": "Out of stock",
+      "productImage": "51F+5XOSpHL._AC_SX425_.jpg",
+      "suggestedAge": "Unsuggested",
+      "productStatusInfo": "Published",
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1665569488238"
+         }
+      },
+      "tags": [],
+      "variations": [],
+      "__v": 0,
+      "category": {
+         "$oid": "634692fef1c0365465be32f1"
+      },
+      "salePrice": 200
+   },
+   {
+      "_id": {
+         "$oid": "63469415f1c0365465be330f"
+      },
+      "name": "Fire-Boltt Ninja 2 SpO2 Full Touch Smartwatch with 30 Workout Modes, Heart Rate Tracking, and 100+ Cloud Watch Faces, 7 Days of extensive Battery",
+      "price": 1599,
+      "discription": "Fire-Boltt is India' No 1 Wearable Watch Brand Q122 by IDC Worldwide quarterly wearable device tracker Q122.【SPO2/ Oxygen, Heart Rate Monitoring】 - Fire-Boltt Ninja 2 Smatwatch comes with real time 24*7 SPO2 / Blood Oxygen tracking, Track your heart rate on the go with best in class technology. Get faster, accurate results;【Track each sport | 30 Workout Module】 - Sweat that fat out with each sports mode tracked and monitor. Enjoy your favourite sport and let the machine do the tracking\r\n【IP68 Rating Water Resistant】- Fire-Boltt Ninja 2 comes with an IP68 Rating allowing you to enjoy mild rains with the watch! Sweat and Water Resistance at its Best!;【HD Large Screen Full Touch 】- Fire-Boltt Ninja 2 smartwatch is a 1.3 inches Color screen full touch display, with 240*240 pixel HD clarity, the material, design and craftsmanship are all exquisite. Full capacitive touch, supporting taps and swipes.\r\n【Upto 7 Day Battery Life】 - Powerful battery to concentrate on the game without stopping. 【Set Up Alarms】- Set alarms and never be late for that meeting.\r\n【Music & Camera Control】- Fire-Boltt Ninja 2 now lets the user remote control all the mobile function on the wrist!; Excellent Menu Control】- With a Honeycomb menu, the user can land to any activity with just one swipe and one tap\r\nConnectivity Technology: Bluetooth; Clasp Type: Tang Buckle; Item Type Name: Smart Watch; Case Material Type: Plastic; Included Components: 1u Smartwatch, 1u Charging Cable, 1u Manual; Band Material Type: Silicone; Human Interface Input: Touch Screen; Compatible Devices: Smartphonetablet",
+      "stockStatus": "Out of stock",
+      "productImage": "61lW8Keh7YL._SY450_.jpg",
+      "suggestedAge": "Unsuggested",
+      "productStatusInfo": "Published",
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1665483413040"
+         }
+      },
+      "tags": [],
+      "variations": [],
+      "__v": 0,
+      "salePrice": 999
+   },
+   {
+      "_id": {
+         "$oid": "6346955df1c0365465be3320"
+      },
+      "name": "Knoos Men's Loafer",
+      "price": 489,
+      "stockStatus": "Out of stock",
+      "productImage": "71AfojFejBL._UY625_.jpg",
+      "suggestedAge": "Unsuggested",
+      "productStatusInfo": "Published",
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1665483741666"
+         }
+      },
+      "tags": [],
+      "variations": [],
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "634698e147b3e2faf48e67b4"
+      },
+      "name": "Jbl C100Si Jbl Pure Bass Sound, One Button Multi-Function Remote, Angled Buds Wired In Ear Earphones With Mic For Comfort Fit (Black)",
+      "price": 599,
+      "discription": "JBL Signature Sound\r\nLightweight and Comfortable : The 3 sizes of ear tips (S,M,L) that are included allow you to choose a size that gives you the most comfortable listening experience even for longer listening periods\r\nJBL Signature Sound. Frequency range:20-20kHz,Driver sensitivity:100±3dBSPL, 1mW,Maximum SPL:5mW\r\nExtra Deep Bass. Troubleshooting steps : Kindly ensure 3.5mm port on Host device is clean and dust free and 3.5mm jack of the earphone is adequately inserted inside the input device port\r\nNoise Cancelling Microphone\r\nOne-Button Universal Remote with Mic\r\nQuick Launch Access to Google Assistant / Siri",
+      "stockStatus": "Out of stock",
+      "productImage": "51Q8DUDT2eL._SY450_.jpg",
+      "suggestedAge": "Unsuggested",
+      "productStatusInfo": "Published",
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1665398241738"
+         }
+      },
+      "tags": [],
+      "variations": [],
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "63479ff6b394947c9d5effa3"
+      },
+      "name": "Beats Studio3 Wireless Noise Cancelling Over-Ear Headphones - Apple W1 Headphone Chip, Class 1 Bluetooth, 22 Hours of Listening Time, Built-in Microphone - Defiant Black-Red (Latest Model)",
+      "price": 270.49,
+      "discription": "High-performance wireless noise cancelling headphones\r\nCompatible with iOS and Android devices.\r\nPure adaptive noise canceling (pure ANC) actively blocks external noise\r\nReal-time Audio calibration preserves a Premium listening experience\r\nUp to 22 hours of battery life enables full-featured all-day wireless playback\r\nApple's W1 chip and industry-leading Bluetooth technology keep you connected farther with fewer drop-outs\r\nWith fast Fuel, a 10-minute charge gives 3 hours of play when battery is low. Rechargeable lithium ion battery",
+      "stockStatus": "Out of stock",
+      "productImage": "71DA4ZktfSL._AC_SL1500_.jpg",
+      "suggestedAge": "Unsuggested",
+      "productStatusInfo": "Published",
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1665638390409"
+         }
+      },
+      "tags": [],
+      "variations": [],
+      "__v": 0,
+      "category": {
+         "$oid": "6347a002b394947c9d5effa6"
+      }
+   },
+   {
+      "_id": {
+         "$oid": "6347a045cf50253068ebfb51"
+      },
+      "name": "Beats Fit Pro – True Wireless Noise Cancelling Earbuds – Apple H1 Headphone Chip, Compatible with Apple & Android, Class 1 Bluetooth®, Built-in Microphone, 6 Hours of Listening Time – Black",
+      "price": 199.95,
+      "discription": "Flexible, secure-fit wingtips for all-day comfort and stability\r\nCustom acoustic platform delivers powerful, balanced sound\r\nSpatial Audio with dynamic head tracking for immersive music, movies, and games\r\nThree distinct listening modes: Active Noise Cancelling, and Transparency Mode, and Adaptive EQ\r\nEnhanced by the Apple H1 chip for Automatic Switching, Audio Sharing (with another pair of Beats headphones or Apple AirPods), and “Hey Siri”\r\nSweat and water resistant (IPX4-rated) earbuds\r\nUp to 6 hours of listening time (up to 24 hours combined with pocket-sized charging case)",
+      "stockStatus": "Out of stock",
+      "productImage": "51rqaaObcZL._AC_SX466_.jpg",
+      "suggestedAge": "Unsuggested",
+      "productStatusInfo": "Published",
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1665638469493"
+         }
+      },
+      "tags": [],
+      "variations": [],
+      "__v": 0,
+      "category": {
+         "$oid": "6347a04cf1d57d625383802d"
+      },
+      "salePrice": 100
+   },
+   {
+      "_id": {
+         "$oid": "63496a9a179f15896ab00b8d"
+      },
+      "name": "BENGOO G9000 Stereo Gaming Headset for PS4 PC Xbox One PS5 Controller, Noise Cancelling Over Ear Headphones with Mic, LED Light, Bass Surround, Soft Memory Earmuffs for Laptop Mac Nintendo NES Games",
+      "price": 23000,
+      "discription": "【Multi-Platform Compatible】Support PlayStation 4, New Xbox One, PC, Nintendo 3DS, Laptop, PSP, Tablet, iPad, Computer, Mobile Phone. Please note you need an extra Microsoft Adapter (Not Included) when connect with an old version Xbox One controller.\r\n【Surrounding Stereo Subwoofer】Clear sound operating strong brass, splendid ambient noise isolation and high precision 40mm magnetic neodymium driver, acoustic positioning precision enhance the sensitivity of the speaker unit, bringing you vivid sound field, sound clarity, shock feeling sound. Perfect for various games like Halo 5 Guardians, Metal Gear Solid, Call of Duty, Star Wars Battlefront, Overwatch, World of Warcraft Legion, etc.\r\n【Noise Isolating Microphone】Headset integrated onmi-directional microphone can transmits high quality communication with its premium noise-concellng feature, can pick up sounds with great sensitivity and remove the noise, which enables you clearly deliver or receive messages while you are in a game. Long flexible mic design very convenient to adjust angle of the microphone.\r\n【Great Humanized Design】Superior comfortable and good air permeability protein over-ear pads, muti-points headbeam, acord with human body engineering specification can reduce hearing impairment and heat sweat.Skin friendly leather material for a longer period of wearing. Glaring LED lights desigend on the earcups to highlight game atmosphere.\r\n【Effortlessly Volume Control】High tensile strength, anti-winding braided USB cable with rotary volume controller and key microphone mute effectively prevents the 49-inches long cable from twining and allows you to control the volume easily and mute the mic as effortless volume control one key mute.\r\nNote: Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination. Please check compatibility before purchasing.",
+      "category": {
+         "$oid": "6347a002b394947c9d5effa6"
+      },
+      "stockStatus": "Out of stock",
+      "productImage": "61CGHv6kmWL._AC_SL1000_.jpg",
+      "suggestedAge": "Unsuggested",
+      "productStatusInfo": "Published",
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1665755802171"
+         }
+      },
+      "tags": [],
+      "variations": [],
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "634ad94987ce2ef1836fea60"
+      },
+      "name": "Fisher-Price Laugh & Learn Smart Stages Piggy Bank",
+      "price": 17.99,
+      "discription": "40+ sing-along songs, tunes & phrases\r\nIncludes Smart Stages technology – learning content changes as baby grows\r\nTwo levels of play offer fresh songs, phrases & sounds for your little one's age & stage\r\nIncludes 10 colorful coins to drop into the piggy's back or belly – the coins teach animals on one side and numbers on the other\r\nOpen & close door for put-and-take play",
+      "category": {
+         "$oid": "6347a002b394947c9d5effa6"
+      },
+      "stockStatus": "On backorder",
+      "productImage": "61t1RCXkuLL._AC_SX569_.jpg",
+      "suggestedAge": "Unsuggested",
+      "productStatusInfo": "Published",
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1665849673114"
+         }
+      },
+      "tags": [],
+      "variations": [],
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "634adb6933f6d0f49be2b4af"
+      },
+      "name": "Yeacomm 5G Modem WiFi-6 AX3600 Router with Sim Card Slot,Up to 4.67Gbps 5G LTE Router,Voice Volte, Cat20 Mobile Router Dual-Band NSA/SA,Wireless Modem for 5G/4G/3G Network",
+      "price": 529,
+      "salePrice": 98,
+      "discription": "Up to 4.67Gbps 5G Network & Nano Sim Card Slot： This 5G Modem use commercial grade wireless 5G NR and LTE-A Cat20 brings you ultra-fast speed and stable 5G mobile network. The 5G router is also backward compatible with 4G LTE networks and 3G networks, covering the mainstream frequency bands in North America and compatible with SA and NSA standards. Working with Major 4G/5G Providers, such as AT&T and T-Mobile.\r\nAX3600 & High-speed WiFi 6 Technology： This 5G modem router features high-speed WiFi 6 technology that provides higher transmission rates, lower latency, and wider coverage for simultaneous communication between multiple devices.This WiFi 6 router supports",
+      "category": {
+         "$oid": "634adb6933f6d0f49be2b4ac"
+      },
+      "stockStatus": "Out of stock",
+      "weight": 0,
+      "length": 0,
+      "wide": 0,
+      "height": 0,
+      "productImage": "41m-IJ-9TUL._AC_SX679_.jpg",
+      "suggestedAge": "",
+      "productStatusInfo": "Draft",
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1665850217623"
+         }
+      },
+      "tags": [],
+      "variations": [],
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "634ebedc027c25b7101a8883"
+      },
+      "name": "Lotus Herbals WhiteGlow Skin Whitening And Brightening Gel, Face Cream with SPF-25, for all skin types, 40g",
+      "price": 188,
+      "discription": "UVA and UVB Protection\r\nEnriched with mulberry saxifrage and grape extracts\r\nSPF 25 | PA+++\r\nIt brightens your skin tone and adds a natural glow to it",
+      "category": {
+         "$oid": "634ebdf2dec2a42b04fae289"
+      },
+      "stockStatus": "Out of stock",
+      "productImage": "61Ur6uVWDML._SY450_.jpg",
+      "suggestedAge": "Unsuggested",
+      "productStatusInfo": "Published",
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1666105052504"
+         }
+      },
+      "tags": [],
+      "variations": [],
+      "__v": 0
+   },
+   {
+      "_id": {
+         "$oid": "635173317b42851404695d4d"
+      },
+      "name": "Xbox Series X",
+      "price": 100000,
+      "discription": "Next wave of invites will be sent on 10/21/2022 to qualifying customers. While supplies last.\r\nIntroducing Xbox Series X, the fastest, most powerful Xbox ever. Play thousands of titles from four generations of consoles-all games look and play best on Xbox Series X.\r\nExperience next-gen speed and performance with the Xbox velocity architecture, powered by a custom SSD and integrated software.\r\nPlay thousands of games from 4 generations of Xbox with Backward compatibility, including optimized titles at launch.\r\nDownload and play over 100 high-quality games, including all new Xbox Game Studios titles like Halo Infinite the day they release, with Xbox Game Pass ultimate (membership sold separately).\r\nXbox Smart delivery ensures you play the best available version of your game no matter which Console you're playing on.",
+      "stockStatus": "Out of stock",
+      "productImage": "61JGKhqxHxL._SX466_.jpg",
+      "suggestedAge": "Unsuggested",
+      "productStatusInfo": "Published",
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1666282289960"
+         }
+      },
+      "tags": [],
+      "variations": [],
+      "__v": 0,
+      "category": {
+         "$oid": "63517346061ff2eaaa033e49"
+      },
+      "salePrice": 1000
+   },
+   {
+      "_id": {
+         "$oid": "6352f9f53a669143038f41f7"
+      },
+      "name": "NVIDIA SHIELD Android TV Streaming Media Player; 4K HDR, live sports, Dolby Vision-Atmos, AI-enhanced upscaling, GeForce NOW cloud gaming, Google Assistant Built-In, Works with Alexa",
+      "price": 149.99,
+      "salePrice": 0,
+      "discription": "Fast. Really Fast. SHIELD TV takes media streaming to a whole new level, powered by the NVIDIA Tegra X1+ processor, SHIELD TV is the world’s most powerful Android TV streaming media player and has been upgraded to Android TV version 11\nDolby Vision - Atmos. Bring your home theater to life with Dolby Vision HDR and Dolby Atmos surround sound—delivering ultra-vivid picture quality and immersive audio. Enhance HD video in real-time to 4K for clearer, crisper visuals using next-generation AI upscaling\n4K HDR Content. Get the most 4K HDR content of any streaming media player. Watch Netflix, Amazon Video, Apple TV+, Disney+ and Google Play Movies & TV in crisp 4K HDR, and YouTube, Hulu, and more in 4K. Stream from your phone with built-in Chromecast 4K.\nGeForce NOW Cloud Gaming. GeForce NOW instantly transforms SHIELD TV into a powerful PC gaming rig. Play over 1000+ titles and nearly 100 of the biggest free to play games. The new GeForce NOW RTX 3080 membership unlocks GeForce RTX 3080 gaming servers in 4K HDR, the shortest wait times and longest session lengths, with RTX ON including ray tracing and DLSS graphics for supported games.\nVoice Control. The built-in Google Assistant is at your command. See photos, live camera feeds, weather, sports scores, and more on the big screen. Dim the lights and immerse yourself in your favorite show or music using your voice. And control your SHIELD hands-free with Google Home or Alexa and Amazon Echo.",
+      "category": {
+         "$oid": "6352f9f53a669143038f41f4"
+      },
+      "stockStatus": "Out of stock,",
+      "weight": 0,
+      "length": 0,
+      "wide": 0,
+      "height": 0,
+      "productImage": "51irVXBTIrL._AC_SX425_.jpg",
+      "suggestedAge": "",
+      "brand": {
+         "$oid": "6352f9babbfeda21332a2227"
+      },
+      "productStatusInfo": "Draft",
+      "createdAt": {
+         "$date": {
+            "$numberLong": "1666382325613"
+         }
+      },
+      "tags": [],
+      "variations": [],
+      "__v": 0
+   }
+]
