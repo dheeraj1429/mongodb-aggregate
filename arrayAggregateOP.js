@@ -90,9 +90,15 @@ db.pr.aggregate([
    },
 ]);
 
-// $reverseArray => { $reverseArray: <array expression> }
+// $reverseArray => { $reverseArray: <array expression> } reverse the array.
 
 // $reduce => { $reduce: {  input: <array>, initialValue: <expression>, in: <expression> } }
+
+// $unwind => { $unwind: <field path> }
+db.pr.aggregate([
+   { $unwind: '$examScores' },
+   { $group: { _id: { docId: '$_id' }, allScors: { $push: '$examScores.score' } } },
+]);
 
 // question 1 - find the all product documents which contains the salePrice filed and then sort all the products by salePrice -1
 db.products
@@ -100,5 +106,122 @@ db.products
       { $match: { salePrice: { $exists: true } } },
       { $project: { _id: 1, name: 1, price: 1, salePrice: 1 } },
       { $sort: { salePrice: 1 } },
+   ])
+   .pretty();
+
+// Object values into the array;
+db.persons.aggregate([
+   {
+      $project: {
+         _id: 1,
+         location: 1,
+         birth: { $convert: { input: '$dob.date', to: 'date' } },
+      },
+   },
+   {
+      $project: {
+         type: 'point',
+         birth: 1,
+         coordinates: [
+            {
+               $convert: {
+                  input: '$location.coordinates.longitude',
+                  to: 'double',
+                  onError: 0,
+                  onNull: 0,
+               },
+            },
+            {
+               $convert: {
+                  input: '$location.coordinates.latitude',
+                  to: 'double',
+                  onError: 0,
+                  onNull: 0,
+               },
+            },
+         ],
+      },
+   },
+   { $group: { _id: { birthYear: { $isoWeekYear: '$birth' } }, totalDoc: { $sum: 1 } } },
+]);
+
+// $push
+db.persons
+   .aggregate([
+      {
+         $group: {
+            _id: { name: '$name' },
+            allCoordinates: { $push: '$location.coordinates' },
+         },
+      },
+   ])
+   .pretty();
+
+db.pr
+   .aggregate([
+      { $sort: { 'examScore.score': 1 } },
+      { $project: { highest: { $slice: ['$examScores', 1] } } },
+   ])
+   .pretty();
+
+db.pr.aggregate([
+   { $unwind: '$examScores' },
+   { $project: { _id: 1, age: 1, name: 1, score: '$examScores.score' } },
+   { $sort: { score: 1 } },
+   {
+      $group: {
+         _id: '$_id',
+         name: { $first: '$name' },
+         age: { $first: '$age' },
+         maxScore: { $max: '$score' },
+      },
+   },
+]);
+
+// bucket =>
+
+/*
+{
+  $bucket: {
+      groupBy: <expression>,
+      boundaries: [ <lowerbound1>, <lowerbound2>, ... ],
+      default: <literal>,
+      output: {
+         <output1>: { <$accumulator expression> },
+         ...
+         <outputN>: { <$accumulator expression> }
+      }
+   }
+}
+*/
+
+db.products
+   .aggregate([
+      {
+         $bucket: {
+            groupBy: '$price',
+            boundaries: [1000, 2000, 3000, 4000, 5000, 6000],
+            default: 'Other',
+            output: {
+               documents: { $sum: 1 },
+               productsName: { $push: '$name' },
+            },
+         },
+      },
+   ])
+   .pretty();
+
+db.products
+   .aggregate([
+      {
+         $bucketAuto: {
+            groupBy: '$price',
+            buckets: 5,
+            output: {
+               documents: { $sum: 1 },
+               productsName: { $push: '$name' },
+            },
+         },
+      },
    ])
    .pretty();
