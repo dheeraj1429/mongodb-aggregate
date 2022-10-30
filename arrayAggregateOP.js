@@ -3,9 +3,7 @@ db.pr.aggregate([{ $project: { firstElm: { $arrayElemAt: ['$hobbies', -1] } } }]
 db.pr.aggregate([{ $project: { firstElm: { $arrayElemAt: ['$hobbies', 1] } } }]); // return first elements from the array
 
 // 2 - $concatArrays => { $concatArrays: [ <array1>, <array2>, ... ] }
-db.pr.aggregate([
-   { $project: { concatAr: { $concatArrays: ['$hobbies', '$examScores'] } } },
-]);
+db.pr.aggregate([{ $project: { concatAr: { $concatArrays: ['$hobbies', '$examScores'] } } }]);
 db.pr.aggregate([
    {
       $project: {
@@ -38,9 +36,7 @@ db.pr.aggregate([
 ]);
 
 // 4 - $indexOfArray => { $indexOfArray: [ <array expression>, <search expression>, <start>, <end> ] }
-db.pr.aggregate([
-   { $project: { arraySearchElm: { $indexOfArray: ['$hobbies', 'Cooking'] } } },
-]);
+db.pr.aggregate([{ $project: { arraySearchElm: { $indexOfArray: ['$hobbies', 'Cooking'] } } }]);
 
 db.pr.aggregate([
    {
@@ -158,10 +154,7 @@ db.persons
    .pretty();
 
 db.pr
-   .aggregate([
-      { $sort: { 'examScore.score': 1 } },
-      { $project: { highest: { $slice: ['$examScores', 1] } } },
-   ])
+   .aggregate([{ $sort: { 'examScore.score': 1 } }, { $project: { highest: { $slice: ['$examScores', 1] } } }])
    .pretty();
 
 db.pr.aggregate([
