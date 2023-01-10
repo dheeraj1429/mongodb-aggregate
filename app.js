@@ -1,4 +1,6 @@
 // https://mongoing.com/docs/reference/operator/aggregation-pipeline.html\
+// https://mongoing.com/docs/reference/command/nav-aggregation.html
+// https://mongoing.com/docs/reference/operator/aggregation.html
 
 // mongodb aggrigation query with notes, and demos.
 
@@ -30,7 +32,12 @@ db.pr.find({ examScores: { $elemMatch: { difficulty: 3 } } }); // we can use the
 // $or	Joins query clauses with a logical OR returns all documents that match the conditions of either clause.
 // { $or: [ { <expression1> }, { <expression2> }, ... , { <expressionN> } ] } => || oprator
 db.persons.find({ $or: [{ gender: { $eq: 'male' } }, { phone: '23138213' }] });
-db.pr.find({ $or: [{ _id: ObjectId('634bbdc9274fb1aff561a6fc') }, { _id: ObjectId('634bbdc9274fb1aff561a6fd') }] });
+db.pr.find({
+   $or: [
+      { _id: ObjectId('634bbdc9274fb1aff561a6fc') },
+      { _id: ObjectId('634bbdc9274fb1aff561a6fd') },
+   ],
+});
 
 // $and	Joins query clauses with a logical AND returns all documents that match the conditions of both clauses.
 // { $and: [ { <expression1> }, { <expression2> } , ... , { <expressionN> } ] } => && oprator
@@ -59,7 +66,10 @@ db.pr.find({ age: { $mod: [10, 0] } }); // return those document where the docum
 
 // $regex	Selects documents where values match a specified regular expression.
 db.pr.find({ name: { $regex: /m/i } });
-db.pr.updateOne({ _id: ObjectId('634bbdc9274fb1aff561a6fb') }, { $push: { examScores: { name: 'dheeraj', age: 20 } } });
+db.pr.updateOne(
+   { _id: ObjectId('634bbdc9274fb1aff561a6fb') },
+   { $push: { examScores: { name: 'dheeraj', age: 20 } } }
+);
 db.pr.find({ examScores: { $elemMatch: { name: { $regex: /d/i } } } }); // find the documents where the examScores field containt the object and inside the object the key 'name' hold the string where the string has 'd' letter.
 
 // $text	Performs text search.
@@ -138,13 +148,136 @@ db.map.createIndex({ location: '2dsphere' }); // create a spacile index not line
   }
 }
 */
-db.map.find({ location: { $near: { $geometry: { type: 'Point', coordinates: [77.205752, 28.613911] } } } }).pretty(); // its return all the documents which has location.coordinates fields.\
+db.map
+   .find({
+      location: { $near: { $geometry: { type: 'Point', coordinates: [77.205752, 28.613911] } } },
+   })
+   .pretty(); // its return all the documents which has location.coordinates fields.\
 // $near return the object which has near coordinates. it's take a $geometry which is takes a object to find the coordinates.
 // if we want to find the minDistance 30m maxDistance 1000m then we can use the $minDistance, $maxDistance
 db.map.find({
    location: {
       $near: {
-         $geometry: { type: 'Point', coordinates: [77.205752, 28.613911], $maxDistance: 10, $minDistance: 0 },
+         $geometry: {
+            type: 'Point',
+            coordinates: [77.205752, 28.613911],
+            $maxDistance: 10,
+            $minDistance: 0,
+         },
       },
    },
 });
+
+// ------------------------------------------------------
+// Boolean Aggregation Operators
+
+// $and => Returns true only when all its expressions evaluate to true. Accepts any number of argument expressions.
+
+db.getCollection('pr').aggregate([
+   {
+      $match: {
+         $and: [{ _id: ObjectId('634bbdc9274fb1aff561a6fb') }, { hobbies: 'Cooking' }],
+      },
+   },
+]);
+
+// $or => Returns true when any of its expressions evaluates to true. Accepts any number of argument expressions.
+
+db.inventory.aggregate([
+   {
+      $project: {
+         item: 1,
+         result: { $or: [{ $gt: ['$qty', 250] }, { $lt: ['$qty', 200] }] },
+      },
+   },
+]);
+
+// $not => Returns the boolean value that is the opposite of its argument expression. Accepts a single argument expression.
+
+// Date Aggregation Operators
+
+db.getCollection('products').aggregate([
+   {
+      $project: {
+         year: { $year: '$createdAt' },
+         month: { $month: '$createdAt' },
+         day: { $dayOfMonth: '$createdAt' },
+         hour: { $hour: '$createdAt' },
+         minutes: { $minute: '$createdAt' },
+         seconds: { $second: '$createdAt' },
+         milliseconds: { $millisecond: '$createdAt' },
+         dayOfYear: { $dayOfYear: '$createdAt' },
+         dayOfWeek: { $dayOfWeek: '$createdAt' },
+         week: { $week: '$createdAt' },
+      },
+   },
+]);
+
+// Conditional Aggregation Operators
+
+// $cond => { $cond: { if: <boolean-expression>, then: <true-case>, else: <false-case-> } }
+// If the <boolean-expression> evaluates to true, then $cond evaluates and returns the value of the <true-case> expression. Otherwise, $cond evaluates and returns the value of the <false-case> expression.
+db.getCollection('pr').aggregate([
+   {
+      $project: {
+         item: {
+            $cond: {
+               if: { $eq: ['$examScores.score', 57.9] },
+               then: { $arrayElemAt: ['$examScores', 0] },
+               else: { $arrayElemAt: ['$examScores', 1] },
+            },
+         },
+      },
+   },
+]);
+
+// $ifNull => { $ifNull: [ <expression>, <replacement-expression-if-null> ] }
+db.inventory.aggregate([
+   {
+      $project: {
+         item: 1,
+         description: { $ifNull: ['$description', 'Unspecified'] },
+      },
+   },
+]);
+
+// => switch
+
+db.getCollection('pr').aggregate([
+   { $unwind: '$examScores' },
+   {
+      $group: {
+         _id: {
+            _id: '$_id',
+            name: '$name',
+            age: '$age',
+         },
+         scores: { $push: '$examScores.score' },
+      },
+   },
+   {
+      $project: {
+         _id: 1,
+         summery: {
+            $switch: {
+               branches: [
+                  {
+                     case: { $gte: [{ $avg: '$scores' }, 90] },
+                     then: 'great job',
+                  },
+                  {
+                     case: { $gte: [{ $avg: '$scores' }, 60] },
+                     then: 'not bad',
+                  },
+                  {
+                     case: { $gte: [{ $avg: '$scores' }, 40] },
+                     then: 'too bad',
+                  },
+               ],
+            },
+         },
+      },
+   },
+]);
+
+// ------------------------------------------------------

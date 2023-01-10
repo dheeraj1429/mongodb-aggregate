@@ -235,7 +235,10 @@ db.getCollection('pr').aggregate([
          _id: {
             _id: '$_id',
             name: {
-               $concat: [{ $toUpper: { $substr: ['$name', 0, 1] } }, { $toLower: { $substr: ['$name', 1, -1] } }],
+               $concat: [
+                  { $toUpper: { $substr: ['$name', 0, 1] } },
+                  { $toLower: { $substr: ['$name', 1, -1] } },
+               ],
             },
             hoobies: '$hobbies',
             age: '$age',
@@ -285,4 +288,14 @@ db.getCollection('pr').aggregate([
          },
       },
    },
+]);
+
+// Calculates and returns the sum of numeric values. $sum ignores non-numeric values.
+db.getCollection('persons').aggregate([
+   {
+      $match: {
+         $and: [{ gender: 'male' }, { 'name.title': 'mr' }],
+      },
+   },
+   { $group: { _id: '$gender', totalDocs: { $sum: 1 } } },
 ]);
